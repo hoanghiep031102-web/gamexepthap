@@ -1,0 +1,21 @@
+:root{box-sizing:border-box;--ink:#fff7e8;font-family:"Baloo 2","Trebuchet MS",system-ui,sans-serif;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+*{box-sizing:border-box;-webkit-tap-highlight-color:transparent;-webkit-user-select:none;user-select:none;-webkit-touch-callout:none}
+html,body{height:100%;width:100%;margin:0;overflow:hidden;overscroll-behavior:none;touch-action:manipulation;position:fixed;background:#1b1a3a;color:var(--ink)}
+canvas{position:fixed;inset:0;width:100%;height:100%;display:block;touch-action:none}
+#score{position:fixed;top:calc(env(safe-area-inset-top,0px) + 14px);left:0;right:0;text-align:center;font-weight:800;font-size:72px;line-height:1;pointer-events:none;text-shadow:0 4px 0 rgba(0,0,0,.18)}
+#combo{position:fixed;top:calc(env(safe-area-inset-top,0px) + 96px);left:0;right:0;text-align:center;font-weight:600;font-size:22px;opacity:0;transition:opacity .25s;pointer-events:none}
+#mute{position:fixed;top:calc(env(safe-area-inset-top,0px) + 12px);right:12px;width:44px;height:44px;border-radius:50%;border:2px solid rgba(255,247,232,.5);background:rgba(0,0,0,.2);color:var(--ink);font-size:20px;cursor:pointer}
+#mute:focus-visible,.btn:focus-visible{outline:3px solid #ffd166;outline-offset:3px}
+.panel{position:fixed;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:6px;text-align:center;padding:24px;pointer-events:none}
+.panel.hidden{display:none}
+h1{margin:0;font-size:68px;font-weight:800;line-height:.95;text-shadow:0 5px 0 rgba(0,0,0,.2)}
+.sub{font-size:20px;opacity:.9;margin:0 0 10px}
+.hint{font-size:18px;font-weight:600;animation:pulse 1.4s ease-in-out infinite}
+@keyframes pulse{50%{opacity:.35}}
+.big{font-size:96px;font-weight:800;line-height:1}
+.best{font-size:20px;margin-bottom:14px}
+.btn{pointer-events:auto;font:inherit;font-weight:800;font-size:24px;padding:10px 34px;border:0;border-radius:999px;background:#ffd166;color:#2a1f4d;box-shadow:0 5px 0 #c9962b;cursor:pointer}
+.btn:active{transform:translateY(4px);box-shadow:0 1px 0 #c9962b}
+@media (max-width:420px){h1{font-size:56px}#score{font-size:60px}.big{font-size:80px}}
+@media (max-height:480px) and (orientation:landscape){h1{font-size:40px}.big{font-size:56px}#score{font-size:44px}}
+@media (prefers-reduced-motion:reduce){.hint{animation:none}}

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, user-scalable=no">
+<meta name="theme-color" content="#1b1a3a">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<title>Xếp Tháp</title>
+<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<canvas id="c" aria-label="Khu vực chơi game"></canvas>
+<div id="score">0</div>
+<div id="combo"></div>
+<button id="mute" aria-label="Bật/tắt âm thanh">🔊</button>
+
+<div class="panel" id="start">
+  <h1>Xếp<br>Tháp</h1>
+  <p class="sub">Chạm đúng lúc để xếp khối thật cao</p>
+  <p class="hint">Chạm để bắt đầu</p>
+</div>
+<div class="panel hidden" id="over">
+  <div class="sub">Tháp cao</div>
+  <div class="big" id="finalScore">0</div>
+  <div class="best" id="bestText"></div>
+  <button class="btn" id="again">Chơi lại</button>
+</div>
+
+<script src="game.js"></script>
+</body>
+</html>
